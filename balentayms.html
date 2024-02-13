@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Invitation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+
+    }
+    h1, p, button {
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+     <img class="valentine-image" src="milk-and-mocha.gif" alt="Valentine's Day Image">
+     
+  <h1></h1>
+
+  <p>Claudine, can you be my Valentine?</p>
+  
+  <button id="yesButton" onclick="reply('Yes')">Yes</button>
+  <button id="noButton" onclick="reply('No')">No</button>
+
+  <script>
+    let yesButtonSize = 20;
+
+    function reply(response) {
+      if (response === 'Yes') {
+        // Redirect to another page
+        window.location.href = "clong.html"; // Replace "nextpage.html" with the URL of your next page
+      } else if (response === 'No') {
+        alert("Anong NO? Bumalik ka don sa YES.");
+        yesButtonSize += 20; // Increase the size of the Yes button by 5px
+        document.getElementById('yesButton').style.padding = `10px ${yesButtonSize}px`;
+      }
+    }
+  </script>
+
+</body>
+</html>
